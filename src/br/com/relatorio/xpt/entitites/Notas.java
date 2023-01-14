@@ -1,6 +1,5 @@
 package br.com.relatorio.xpt.entitites;
 
-import java.time.LocalDate;
 import java.util.Objects;
 
 public class Notas {
@@ -11,9 +10,9 @@ public class Notas {
 
     private int ano;
 
-    private Long valor;
+    private Double valor;
 
-    private LocalDate data_emissao;
+    private String data_emissao;
 
     private Long nota;
 
@@ -41,19 +40,19 @@ public class Notas {
         this.ano = ano;
     }
 
-    public Long getValor() {
+    public Double getValor() {
         return valor;
     }
 
-    public void setValor(Long valor) {
+    public void setValor(Double valor) {
         this.valor = valor;
     }
 
-    public LocalDate getData_emissao() {
+    public String getData_emissao() {
         return data_emissao;
     }
 
-    public void setData_emissao(LocalDate data_emissao) {
+    public void setData_emissao(String data_emissao) {
         this.data_emissao = data_emissao;
     }
 

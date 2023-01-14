@@ -9,8 +9,11 @@ public class MoneyConverter {
     private MoneyConverter() {}
 
     public static double moneyConverter(String valor) throws ParseException {
-        Locale locale = new Locale.Builder().setLanguage("pt").setRegion("BR").build();
-        NumberFormat numberFormat = NumberFormat.getNumberInstance(locale);
-        return numberFormat.parse(valor).doubleValue();
+        if(!"".equals(valor)) {
+            Locale locale = new Locale.Builder().setLanguage("pt").setRegion("BR").build();
+            NumberFormat numberFormat = NumberFormat.getNumberInstance(locale);
+            return numberFormat.parse(valor).doubleValue();
+        }
+        return 0.0;
     }
 }
